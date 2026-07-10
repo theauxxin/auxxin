@@ -1,0 +1,18 @@
+/* ==========================================================================
+   footer.css — finale CTA scene + footer, links, copyright
+   ========================================================================== */
+
+.finale{ position:relative; padding:120px 0 140px; text-align:center; overflow:hidden; }
+.finale-planet{
+  position:absolute; left:50%; top:0; transform:translate(-50%,-30%);
+  width:640px; height:640px; pointer-events:none; opacity:0.9;
+}
+.finale-inner{ position:relative; z-index:2; max-width:560px; margin:0 auto; }
+.finale h2{ font-size:clamp(28px,3.6vw,42px); margin-bottom:16px; }
+.finale p{ font-size:17px; margin-bottom:32px; }
+
+footer{ border-top:1px solid var(--color-border); padding:56px 0 40px; position:relative; z-index:2; }
+.footer-inner{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+.footer-links{ display:flex; gap:32px; font-size:15px; color:var(--color-text-muted); flex-wrap:wrap; }
+.footer-links a:hover{ color:var(--color-text); }
+.footer-copy{ font-size:13.5px; color:var(--color-text-muted); margin-top:24px; }

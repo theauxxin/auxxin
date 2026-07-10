@@ -1,0 +1,78 @@
+/* ==========================================================================
+   features.css — "Why Auxxin" + Community scenes, and the shared
+   journey/trail component that both features.css and paths.css build on.
+   ========================================================================== */
+
+.journey{ position:relative; padding:60px 0 20px; }
+
+.section-head{ max-width:600px; margin:0 auto 30px; text-align:center; }
+.section-head h2{ font-size:clamp(28px,3.4vw,44px); margin-top:14px; }
+.section-head p{ font-size:17px; margin-top:14px; }
+
+/* ---- Shared trail component (reused by Learning Paths in paths.css) ---- */
+.trail{ position:relative; padding:40px 0; }
+
+.trail-line{
+  position:absolute; left:50%; top:0; bottom:0; width:2px; transform:translateX(-50%);
+  background-image:repeating-linear-gradient(to bottom, rgba(79,140,255,0.5) 0 6px, transparent 6px 14px);
+  z-index:0;
+}
+
+.node{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 110px 1fr;
+  align-items:center;
+  min-height:180px;
+  z-index:1;
+}
+
+.node-planet{ grid-column:2; display:flex; align-items:center; justify-content:center; position:relative; }
+.node-planet .blob-glow{
+  position:absolute; width:150px; height:150px;
+  border-radius:42% 58% 70% 30% / 45% 45% 55% 55%;
+  background:radial-gradient(circle at 35% 30%, rgba(79,140,255,0.35), rgba(99,230,190,0.08) 70%, transparent 75%);
+  filter:blur(2px);
+}
+.node-planet svg{ position:relative; width:96px; height:96px; }
+
+.node-content{
+  opacity:0; transform:translateY(18px);
+  transition:opacity var(--duration-slow) var(--ease), transform var(--duration-slow) var(--ease);
+}
+.node-content.in-view{ opacity:1; transform:translateY(0); }
+
+.node.align-left .node-content{ grid-column:1; text-align:right; padding-right:36px; justify-self:end; position:relative; }
+.node.align-right .node-content{ grid-column:3; text-align:left; padding-left:36px; justify-self:start; position:relative; }
+.node.align-left .node-content::after{
+  content:''; position:absolute; right:0; top:50%; width:26px; height:2px;
+  background:repeating-linear-gradient(to right, rgba(79,140,255,0.5) 0 4px, transparent 4px 9px);
+}
+.node.align-right .node-content::before{
+  content:''; position:absolute; left:0; top:50%; width:26px; height:2px;
+  background:repeating-linear-gradient(to right, rgba(79,140,255,0.5) 0 4px, transparent 4px 9px);
+}
+.node-content h3{ font-size:21px; margin-bottom:8px; }
+.node-content p{ font-size:15px; max-width:320px; }
+.node.align-left .node-content p{ margin-left:auto; }
+.node-top{ display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.node.align-left .node-top{ justify-content:flex-end; }
+
+/* ---- Community section ---- */
+.community{ position:relative; padding:20px 0 40px; }
+.community-inner{
+  display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;
+}
+.community-copy p{ font-size:17px; margin:16px 0 28px; max-width:440px; }
+.community-stats{ display:flex; gap:16px; flex-wrap:wrap; }
+.stat-pill{
+  display:flex; align-items:center; gap:10px;
+  padding:12px 18px;
+  border-radius:var(--radius-pill);
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--color-border);
+  font-size:14px; font-weight:600;
+}
+.stat-pill svg{ width:18px; height:18px; }
+.community-visual{ display:flex; align-items:center; justify-content:center; position:relative; }
+.community-visual svg{ width:100%; max-width:420px; height:auto; }

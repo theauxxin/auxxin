@@ -1,0 +1,35 @@
+/* ==========================================================================
+   responsive.css — ALL media queries live here. Nothing else.
+   ========================================================================== */
+
+@media (max-width:860px){
+  .hero{ min-height:auto; padding-top:40px; }
+  .hero-scene{ position:relative; inset:auto; margin-top:24px; }
+  .hero-scrim{ background:linear-gradient(180deg, var(--color-bg) 0%, rgba(11,18,32,0.2) 40%, var(--color-bg) 100%); }
+  .hero-copy{ max-width:100%; }
+
+  .node{ grid-template-columns:80px 1fr; }
+  .node-planet{ grid-column:1; }
+  .node.align-left .node-content,
+  .node.align-right .node-content{ grid-column:2; text-align:left; padding-left:20px; padding-right:0; justify-self:start; }
+  .node.align-left .node-top{ justify-content:flex-start; }
+  .node.align-left .node-content p,
+  .node.align-left .progress-track{ margin-left:0; }
+  .node.align-left .node-content::after{ display:none; }
+  .node.align-right .node-content::before{ left:-14px; width:14px; }
+  .trail-line{ left:40px; }
+  .trail-orb{ left:40px; }
+
+  .community-inner{ grid-template-columns:1fr; text-align:center; }
+  .community-copy p{ margin-left:auto; margin-right:auto; }
+  .community-stats{ justify-content:center; }
+
+  .finale-planet{ width:420px; height:420px; }
+}
+
+@media (max-width:760px){
+  .nav-links{ display:none; }
+  .nav-right .btn-small,
+  .nav-right .btn-ghost{ display:none; }
+  .hamburger{ display:block; }
+}

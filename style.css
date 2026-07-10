@@ -1,8 +1,15 @@
-body {
-    font-family: 'consolas';
-    text-align: center;
-    background: linear-gradient(to bottom, #001eff78, #2e4bee);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+/* ==========================================================================
+   style.css — composition root.
+   Do not add rules here. Add them to the correct file in /css and import it.
+   Order matters: tokens → reset → layout regions → animation → responsive.
+   ========================================================================== */
+
+@import url('css/variables.css');
+@import url('css/reset.css');
+@import url('css/navbar.css');
+@import url('css/hero.css');
+@import url('css/features.css');
+@import url('css/paths.css');
+@import url('css/footer.css');
+@import url('css/animations.css');
+@import url('css/responsive.css'); /* must stay last so media queries win the cascade */

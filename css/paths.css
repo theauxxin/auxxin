@@ -1,0 +1,34 @@
+/* ==========================================================================
+   paths.css — Learning Path nodes. Badges. Progress bars.
+   Relies on .trail / .node / .node-planet / .node-content from features.css.
+   ========================================================================== */
+
+.badge{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.04em;
+  padding:5px 11px;
+  border-radius:var(--radius-pill);
+  white-space:nowrap;
+}
+.badge-beginner{ background:rgba(99,230,190,0.14); color:var(--color-accent-2); }
+.badge-intermediate{ background:rgba(79,140,255,0.16); color:var(--color-accent); }
+.badge-advanced{ background:rgba(248,113,113,0.14); color:var(--color-danger); }
+
+.progress-track{
+  height:5px;
+  border-radius:var(--radius-pill);
+  background:rgba(255,255,255,0.08);
+  overflow:hidden;
+  margin-top:14px;
+  max-width:220px;
+}
+.node.align-left .progress-track{ margin-left:auto; }
+
+.progress-fill{
+  height:100%;
+  width:0%; /* animated to target width by js/paths.js when scrolled into view */
+  border-radius:var(--radius-pill);
+  background:linear-gradient(90deg,var(--color-accent),var(--color-accent-2));
+  transition:width 900ms var(--ease);
+}

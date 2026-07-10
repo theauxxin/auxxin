@@ -1,0 +1,64 @@
+/* ==========================================================================
+   navbar.css — everything related to navigation
+   ========================================================================== */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(14px);
+  background:rgba(11,18,32,0.72);
+  border-bottom:1px solid var(--color-border);
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:var(--nav-height);
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:19px;
+  font-weight:800;
+  letter-spacing:-0.01em;
+}
+.logo-mark{ width:30px; height:30px; }
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:36px;
+  font-size:16px;
+  font-weight:500;
+  color:var(--color-text-muted);
+}
+.nav-links a{ transition:color var(--duration-fast) var(--ease); }
+.nav-links a:hover{ color:var(--color-text); }
+
+.nav-right{ display:flex; align-items:center; gap:16px; }
+
+.hamburger{ display:none; width:22px; height:16px; position:relative; }
+.hamburger span{
+  position:absolute; left:0; right:0; height:2px;
+  background:var(--color-text); border-radius:2px;
+  transition:all var(--duration-base) var(--ease);
+}
+.hamburger span:nth-child(1){ top:0; }
+.hamburger span:nth-child(2){ top:7px; }
+.hamburger span:nth-child(3){ top:14px; }
+
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  gap:20px;
+  padding:24px 32px 32px;
+  border-top:1px solid var(--color-border);
+  background:var(--color-bg);
+}
+.mobile-menu a{ font-size:17px; color:var(--color-text-muted); font-weight:500; }
+.mobile-menu.open{ display:flex; }
+.mobile-menu .btn{ width:fit-content; }

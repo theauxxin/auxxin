@@ -1,0 +1,37 @@
+/* ==========================================================================
+   variables.css — Auxxin design tokens
+   Colors, type, radius, shadow, spacing, timing.
+   Nothing else should live in this file.
+   ========================================================================== */
+
+:root{
+  /* Color — deep navy primary, one blue accent, one mint secondary accent */
+  --color-bg:#0B1220;
+  --color-surface:#111827;
+  --color-accent:#4F8CFF;      /* primary accent */
+  --color-accent-2:#63E6BE;    /* secondary accent (mint) */
+  --color-text:#F8FAFC;        /* neutral / white */
+  --color-text-muted:#94A3B8;  /* muted gray */
+  --color-border:rgba(255,255,255,0.08);
+  --color-border-strong:rgba(255,255,255,0.14);
+  --color-danger:#f87171;
+
+  /* Layout */
+  --max-width:1200px;
+  --nav-height:76px;
+
+  /* Radius */
+  --radius-sm:10px;
+  --radius-md:16px;
+  --radius-lg:24px;
+  --radius-pill:100px;
+
+  /* Shadow */
+  --shadow-soft:0 8px 24px -8px rgba(79,140,255,0.55);
+
+  /* Timing — gentle, never bouncy */
+  --ease:cubic-bezier(.22,1,.36,1);
+  --duration-fast:200ms;
+  --duration-base:300ms;
+  --duration-slow:700ms;
+}
